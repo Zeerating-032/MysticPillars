@@ -119,7 +119,7 @@ print("Shortest:", shortest)
 all_trans_way = [] #所有可移動的起點/終點組合
 for i in range(t):
 	for j in range(t):
-		if shortest[i][j] != -1: #沒路
+		if shortest[i][j] != -1 and i != j: #沒路或相同
 			all_trans_way.append((i, j))
 print("all_trans_way:", all_trans_way)
 
